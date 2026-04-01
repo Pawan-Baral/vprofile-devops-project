@@ -1,30 +1,88 @@
+# 🚀 VProfile DevOps Lift & Shift Project
 
-# Prerequisites
-#
-- JDK 1.8 or later
-- Maven 3 or later
-- MySQL 5.6 or later
+## 📌 Overview
 
-# Technologies 
-- Spring MVC
-- Spring Security
-- Spring Data JPA
-- Maven
-- JSP
-- MySQL
-# Database
-Here,we used Mysql DB 
-MSQL DB Installation Steps for Linux ubuntu 14.04:
-- $ sudo apt-get update
-- $ sudo apt-get install mysql-server
+This project demonstrates a complete **Lift & Shift migration** of a Java web application to the cloud using modern DevOps practices.
 
-Then look for the file :
-- /src/main/resources/accountsdb
-- accountsdb.sql file is a mysql dump file.we have to import this dump to mysql db server
-- > mysql -u <user_name> -p accounts < accountsdb.sql
+It includes CI/CD automation, configuration management, and infrastructure provisioning.
 
+---
 
-=======
-# vprofile-devops-project
-vprofile-devops-project
->>>>>>> afbfb8cb053e687c475758105e2fd0d93479f21b
+## 🧰 Tech Stack
+
+* Java (Spring MVC)
+* Maven
+* Apache Tomcat
+* Jenkins (CI/CD)
+* Ansible (Configuration Management)
+* AWS (EC2, S3, IAM)
+* Nginx
+* MySQL
+* Memcached
+* RabbitMQ
+
+---
+
+## ⚙️ Architecture
+
+The system is deployed on AWS using multiple services:
+
+* EC2 instances for application and services
+* Nginx as reverse proxy
+* MySQL for database
+* Memcached for caching
+* RabbitMQ for messaging
+
+---
+
+## 🔄 CI/CD Pipeline
+
+1. Developer pushes code to GitHub
+2. Jenkins triggers pipeline
+3. Maven builds the application (WAR file)
+4. Ansible provisions and configures servers
+5. Application deployed to Tomcat
+6. Nginx routes traffic
+
+---
+
+## 📂 Project Structure
+
+* `Jenkinsfile` → CI/CD pipeline
+* `ansible/` → automation scripts
+* `userdata/` → provisioning scripts
+* `src/` → application code
+
+---
+
+## 🎯 Key Highlights
+
+* Automated deployment using Jenkins + Ansible
+* Infrastructure as Code approach
+* Scalable multi-tier architecture
+* Real-world DevOps workflow
+
+---
+
+## 📸 Architecture Diagram
+
+GitHub → Jenkins → Ansible → AWS EC2
+                                ↓
+        ┌───────────────┬───────────────┬
+        ↓               ↓               ↓
+     Tomcat         MySQL         Memcached
+        ↓                                |             
+     Nginx (Public Access)             Database
+
+---
+
+## 🚀 How to Run
+
+1. Clone repo
+2. Setup Jenkins
+3. Configure AWS EC2 instances
+4. Run Ansible playbooks
+5. Deploy using Jenkins pipeline
+
+---
+
