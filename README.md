@@ -1,3 +1,4 @@
+
 # Prerequisites
 #
 - JDK 1.8 or later
@@ -23,3 +24,7 @@ Then look for the file :
 - > mysql -u <user_name> -p accounts < accountsdb.sql
 
 
+=======
+# vprofile-devops-project
+vprofile-devops-project
+>>>>>>> afbfb8cb053e687c475758105e2fd0d93479f21b
